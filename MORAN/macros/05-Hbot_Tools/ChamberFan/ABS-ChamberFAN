@@ -1,0 +1,1 @@
+M106 P2 H5 L.3 B.5 X1 T50:65 C"ChamFAN"					; Set fan 2 PWR fan. Turns on when MCU temperature, hits 50 and full when the CHAMBER temperature reaches 65C
