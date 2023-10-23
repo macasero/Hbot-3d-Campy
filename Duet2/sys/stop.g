@@ -13,12 +13,6 @@ M220 S100                                                  ; Set the speed facto
 M221 S100                                                  ; Set the extrusion factor back to 100% incase it was changed.
 G1 F10000
 G1 E-2
-; Start countdown - use X/Y as indicators of counting  
-while iterations <=9                                       ; Perform 10 passes.
-    G4 S6                                                  ; Wait 6 seconds.
-    G1 X1 Y1 F1000                                         ; Wiggle +1mm.
-    G4 S6                                                  ; Wait 6 seconds.
-    G1 Z0.5 X-1 Y-1 F1000                                  ; Wiggle -1mm, Z +0.5.
 G90                                                        ; Set to Absolute Positioning.
 G1 X({move.axes[0].max}-15) Y({move.axes[0].max}-15) F9000
 G10 P0 S-274 R-274       ; turn off extruder
